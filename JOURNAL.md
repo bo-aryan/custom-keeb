@@ -68,3 +68,26 @@ Next:
 - Place the mounting holes
 - Finalize the board outline
 - Begin routing
+
+September 9, 2026 
+Time spent: 1.5 hrs
+
+i continued routing the PCB in KiCad.
+
+Completed:
+- Routed all 10 switch-to-diode connections
+- Routed ROW0 to GP0
+- Routed ROW1 to GP1
+- Routed COL0–COL4 to GP2–GP6
+- Used F.Cu and B.Cu to avoid routing conflicts
+- Routed the EC11 encoder signals to GP7, GP8, and GP9
+- Left encoder ground connections for the later GND copper fill
+- Verified the matrix and encoder routing as I went
+
+Next:
+- Route OLED SDA/SCL
+- Route OLED power
+- Route the SK6812 MINI-E LED chain
+- Add GND copper fill
+- Run DRC and fix any errors
+<img width="1085" height="768" alt="image" src="https://github.com/user-attachments/assets/858b1a82-c268-4423-9535-c8ea36e91b77" />
