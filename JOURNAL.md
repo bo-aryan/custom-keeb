@@ -91,3 +91,31 @@ Next:
 - Add GND copper fill
 - Run DRC and fix any errors
 <img width="1085" height="768" alt="image" src="https://github.com/user-attachments/assets/858b1a82-c268-4423-9535-c8ea36e91b77" />
+
+September 10, 2026
+
+Time spent: 2 hrs
+
+i continued routing and finishing the PCB in KiCad.
+
+Completed:
+- Finished the OLED 3V3 connection
+- Routed the SK6812 MINI-E LED data chain
+- Confirmed LED10 DOUT is intentionally left unconnected
+- Routed the RGB VBUS power network to the Pico
+- Added B.Cu and F.Cu GND copper fills
+- Verified that copper gaps around traces/keepouts are expected
+- Ran DRC for the first time
+
+Current issue:
+- DRC reports 74 errors and 19 warnings
+- I have not started fixing these yet because I want to classify the errors first instead of changing things blindly
+
+Next:
+- Review the DRC error list
+- Group errors by type
+- Fix clearance/short/unconnected issues systematically
+- Re-run DRC until clean
+- Final silkscreen/board cleanup
+- Export Gerbers and final project files
+<img width="676" height="438" alt="image" src="https://github.com/user-attachments/assets/189bd666-b45b-4cbe-9844-554f983e478e" />
