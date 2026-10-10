@@ -13,11 +13,6 @@ Completed:
 
 i initially wired part of the matrix incorrectly, then corrected it so
 all five columns share ROW0/ROW1 properly.
-
-Next:
-- Add SK6812 MINI-E LEDs
-- Finish schematic
-- Run ERC
 <img width="1231" height="805" alt="image" src="https://github.com/user-attachments/assets/29657d00-6524-4fd6-a6bc-74eaa1aa28b2" />
 
 September 7, 2026
@@ -32,19 +27,13 @@ Completed:
 - Powered the LEDs from VBUS and connected them to GND
 - Added 4 mounting holes for the case
 - Annotated the schematic components
-
-Next:
-- Assign footprints to all components
-- Verify the schematic
-- Run ERC
-- Begin PCB layout
 <img width="1307" height="480" alt="image" src="https://github.com/user-attachments/assets/30ddfbaf-7ecb-4de3-ab64-db30ef2121bb" />
 
 September 8, 2026
 
 Time spent: 1.5hrs in the morning-afternoon
 
-I continued working on the PCB design in KiCad.
+i continued working on the PCB design in KiCad.
 
 Completed:
 - Assigned footprints to all schematic components
@@ -62,13 +51,6 @@ Notes:
 - Took extra care to verify component placement before continuing to avoid mechanical alignment issues.
 - The board outline is still temporary and will be resized after component placement is finalized.
 
-Next:
-- Numerically verify LED placement for each switch
-- Finish placing LED6–LED10 and D6–D10
-- Place the mounting holes
-- Finalize the board outline
-- Begin routing
-
 September 9, 2026 
 Time spent: 1.5 hrs
 
@@ -83,13 +65,6 @@ Completed:
 - Routed the EC11 encoder signals to GP7, GP8, and GP9
 - Left encoder ground connections for the later GND copper fill
 - Verified the matrix and encoder routing as I went
-
-Next:
-- Route OLED SDA/SCL
-- Route OLED power
-- Route the SK6812 MINI-E LED chain
-- Add GND copper fill
-- Run DRC and fix any errors
 <img width="1085" height="768" alt="image" src="https://github.com/user-attachments/assets/858b1a82-c268-4423-9535-c8ea36e91b77" />
 
 September 10, 2026
@@ -107,15 +82,7 @@ Completed:
 - Verified that copper gaps around traces/keepouts are expected
 - Ran DRC for the first time
 
-Current issue:
+Current issues:
 - DRC reports 74 errors and 19 warnings
 - I have not started fixing these yet because I want to classify the errors first instead of changing things blindly
-
-Next:
-- Review the DRC error list
-- Group errors by type
-- Fix clearance/short/unconnected issues systematically
-- Re-run DRC until clean
-- Final silkscreen/board cleanup
-- Export Gerbers and final project files
 <img width="676" height="438" alt="image" src="https://github.com/user-attachments/assets/189bd666-b45b-4cbe-9844-554f983e478e" />
