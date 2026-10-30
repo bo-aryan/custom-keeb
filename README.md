@@ -40,6 +40,15 @@ The schematic defines the complete electrical system, including:
 - External OLED connector
 - Power and ground connections
 
+## Case Design
+<img width="1042" height="862" alt="image" src="https://github.com/user-attachments/assets/780291fb-5050-4de3-85ba-de4706a1434d" />
+
+The macropad enclosure was designed using **Autodesk Fusion**, with the case modelled to accommodate the PCB, mechanical switches, rotary encoder, and external OLED display.
+
+The enclosure was designed around the PCB dimensions and component placement to ensure proper fitment and accessibility. Particular attention was given to the switch openings, encoder placement, OLED visibility, and USB access.
+
+The design brings the electronics and mechanical components together into a compact enclosure while maintaining the overall layout and functionality of the macropad.
+
 
 ## At a Glance
 
