@@ -2,6 +2,7 @@
 # Custom 8-Key Mechanical Media Macropad
 
 A custom 8-key mechanical macropad designed from scratch as a two-layer PCB around an RP2040-based Orpheus Pico, featuring a diode-isolated switch matrix, per-key RGB lighting, a rotary encoder, and an external OLED display. Designed primarily for controlling music and video playback, with programmable shortcuts for desktop applications.
+<img width="680" height="901" alt="image" src="https://github.com/user-attachments/assets/04112c28-2fbd-4ab1-be7f-af00e3cb38d8" />
 
 ## Overview
 
