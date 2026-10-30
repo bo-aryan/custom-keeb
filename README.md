@@ -15,6 +15,32 @@ The firmware is being developed using CircuitPython, with USB HID for keyboard a
 
 The goal was to design the complete hardware system, understand how its components interact, and develop firmware that turns the PCB into a functional desktop peripheral.
 
+## PCB Design
+
+The PCB was designed as a two-layer board using KiCad.
+<img width="1176" height="813" alt="image" src="https://github.com/user-attachments/assets/faa14f22-027c-49e9-b503-3551ce2206c4" />
+
+
+### Routing
+
+The design uses both copper layers for routing, with vias used where necessary to move between layers.
+
+Ground connectivity is provided through copper fills rather than routing every ground connection individually.
+
+### Schematic
+<img width="811" height="678" alt="image" src="https://github.com/user-attachments/assets/e4e067c9-d523-4f6f-8ad8-c9f8c10dfc2c" />
+
+The schematic defines the complete electrical system, including:
+
+- RP2040-based controller
+- 8-switch matrix
+- 1N4148 switch diodes
+- SK6812 RGB LED chain
+- EC11 rotary encoder
+- External OLED connector
+- Power and ground connections
+
+
 ## At a Glance
 
 | Component | Specification |
@@ -160,27 +186,6 @@ The software is divided into two components:
 
 This separation allows the hardware to handle physical inputs and outputs while the Windows application provides access to desktop media information.
 
-## PCB Design
-
-The PCB was designed as a two-layer board using KiCad.
-
-### Routing
-
-The design uses both copper layers for routing, with vias used where necessary to move between layers.
-
-Ground connectivity is provided through copper fills rather than routing every ground connection individually.
-
-### Schematic
-
-The schematic defines the complete electrical system, including:
-
-- RP2040-based controller
-- 8-switch matrix
-- 1N4148 switch diodes
-- SK6812 RGB LED chain
-- EC11 rotary encoder
-- External OLED connector
-- Power and ground connections
 
 ## Design Files
 
