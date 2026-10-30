@@ -63,6 +63,19 @@ The enclosure was designed around the PCB dimensions and component placement to 
 
 The design brings the electronics and mechanical components together into a compact enclosure while maintaining the overall layout and functionality of the macropad.
 
+## Assembly Challenges & Electrical Debugging
+
+- **Incorrect OLED footprint orientation:** Discovered that the OLED connector footprint was mirrored relative to the schematic, reversing the connections. Identified the mismatch through continuity testing and manually modified the PCB traces to isolate the incorrect connections.
+<img width="279" height="370" alt="image" src="https://github.com/user-attachments/assets/4beaf04c-497d-4069-a201-06088855cf09" />
+
+- **Unintended ground connections:** Found that multiple ground paths were causing unexpected continuity during OLED connector testing. Scraped away excess copper around the affected connections and verified electrical isolation using a multimeter.
+<img width="279" height="370" alt="image" src="https://github.com/user-attachments/assets/9b70fe66-6516-4250-ad84-f8362d5c46d1" />
+
+- **Damaged RGB LEDs during SMD soldering:** Encountered difficulties during my first SMD soldering experience due to the small connection pads and tight component spacing. Damaged two LEDs during assembly, requiring greater attention to polarity and soldering precision.
+
+- **Incorrect hot-swap socket placement:** Discovered an incorrectly soldered hot-swap socket during assembly. Desoldered the component, cleaned the affected pads and reinstalled it correctly.
+<img width="279" height="370" alt="image" src="https://github.com/user-attachments/assets/1a356ab0-794c-416a-94e9-5738d94a4e91" />
+
 
 ## At a Glance
 
