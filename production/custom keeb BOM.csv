@@ -1,0 +1,7 @@
+"Reference","Qty","Value","DNP","Exclude from BOM","Exclude from Board","Exclude from Simulation","Exclude from Position Files","Footprint","Datasheet"
+"A1","1","RaspberryPi_Pico","","","","","${EXCLUDE_FROM_POS_FILES}","Module:RaspberryPi_Pico_Common_THT","https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf"
+"D1,D2,D3,D4,D5,D6,D7,D8","8","1N4148","","","","","${EXCLUDE_FROM_POS_FILES}","Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal","https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf"
+"J1","1","Conn_01x04","","","","","${EXCLUDE_FROM_POS_FILES}","Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",""
+"LED1,LED2,LED3,LED4,LED5,LED6,LED7,LED8","8","MX_SK6812MINI-E","","","","","${EXCLUDE_FROM_POS_FILES}","PCM_marbastlib-mx:LED_MX_6028R",""
+"SW1,SW2,SW3,SW4,SW5,SW6,SW7,SW8","8","SW_Push","","","","","${EXCLUDE_FROM_POS_FILES}","PCM_marbastlib-mx:SW_MX_1u",""
+"SW11","1","RotaryEncoder_Switch","","","","","${EXCLUDE_FROM_POS_FILES}","PCM_marbastlib-various:ROT_Alps_EC11E-Switch",""
