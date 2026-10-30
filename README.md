@@ -4,16 +4,30 @@ A custom 8-key mechanical macropad designed from scratch as a two-layer PCB arou
 <img width="680" height="901" alt="image" src="https://github.com/user-attachments/assets/04112c28-2fbd-4ab1-be7f-af00e3cb38d8" />
 
 ## Overview
+- Designed an 8-key mechanical media macropad around an RP2040-based Orpheus Pico.
+- Designed the complete two-layer PCB, including schematic, component placement, routing, and manufacturing files using KiCad.
+- Integrated an MX switch matrix, SK6812 RGB LEDs, EC11 rotary encoder, and external I2C OLED.
+- Developing CircuitPython firmware for media controls, programmable shortcuts, volume adjustment, and RGB lighting.
+- Building a Python companion application to retrieve Windows media metadata and display song information and playback progress on the OLED.
 
-This project is a compact custom mechanical macropad built around an RP2040-based Orpheus Pico.
+## What I Learned
 
-I designed the electrical system, schematic, PCB layout, component placement, routing, and production files. The board integrates an 8-key switch matrix, addressable RGB lighting, a rotary encoder, and an external I2C OLED display into a compact two-layer PCB.
+This project took me through the complete PCB design process rather than just the schematic stage.
 
-Unlike a conventional keyboard, the macropad is designed around media and desktop controls. Its keys provide dedicated controls for track navigation, playback, Spotify, and Windows shortcuts, while the rotary encoder handles system volume.
+The main learning areas included:
 
-The firmware is being developed using CircuitPython, with USB HID for keyboard and media commands. A companion Windows application communicates with the macropad over USB serial to retrieve active media-session information and display song metadata and playback progress on the OLED.
-
-The goal was to design the complete hardware system, understand how its components interact, and develop firmware that turns the PCB into a functional desktop peripheral.
+- Designing and routing a diode-isolated switch matrix
+- Understanding PCB footprints and physical component placement
+- Managing a two-layer PCB
+- Routing around dense components
+- Using vias and copper fills
+- Connecting addressable RGB LEDs as a chain
+- Integrating an encoder and I2C peripheral
+- Understanding USB HID and media-control commands
+- Developing firmware for an RP2040 microcontroller
+- Integrating hardware with a Windows application through USB serial
+- Running design-rule checks before manufacturing
+- Preparing a PCB for fabrication
 
 ## PCB Design
 
@@ -67,86 +81,6 @@ The design brings the electronics and mechanical components together into a comp
 | Firmware | CircuitPython |
 | Communication | USB HID + USB serial |
 | Companion software | Python (Windows) |
-
-## Key Engineering Decisions
-
-### 1. Diode-Isolated Switch Matrix
-
-The eight mechanical switches are arranged in a three-row, three-column matrix, with the encoder occupying the remaining position in the top row.
-
-Each switch has its own 1N4148 diode to prevent unwanted current paths during simultaneous key presses.
-
-The matrix provides an efficient way to scan multiple switches while minimizing the number of GPIO connections required by the controller.
-
-The firmware maps the populated matrix positions to dedicated media and desktop shortcuts.
-
-### 2. Addressable RGB
-
-The board incorporates 10 SK6812 MINI-E addressable RGB LEDs.
-
-The LEDs are connected in a daisy chain using a single data connection:
-
-```text
-GP10
- │
- ▼
-LED 1 → LED 2 → LED 3 → ... → LED 10
-```
-
-This allows the LEDs to be controlled independently through firmware.
-
-The lighting system is intended to provide visual feedback for playback status, key activity, and other macropad states.
-
-### 3. Rotary Encoder
-
-An EC11 rotary encoder provides three inputs:
-
-- Encoder A → GP7
-- Encoder B → GP8
-- Encoder switch → GP9
-
-The encoder serves two functions:
-
-- Clockwise and anticlockwise rotation control system volume.
-- Pressing the encoder toggles mute/unmute.
-
-This provides dedicated volume control without requiring additional keyboard shortcuts.
-
-### 4. OLED Interface
-
-The 0.91-inch OLED connects through an external 1×4 I2C connector, allowing the display to remain separate from the main PCB.
-
-```text
-J1
-├── GND
-├── 3V3
-├── SCL → GP21
-└── SDA → GP20
-```
-
-The OLED is intended to display live media information retrieved from the connected Windows computer, including:
-
-- Current song title
-- Artist name
-- Playback status
-- Elapsed playback time
-- Remaining playback time
-- Playback progress bar
-
-The display also provides feedback for volume adjustments and other macropad actions.
-
-A companion Python application retrieves media information through Windows' Global System Media Transport Controls interface and sends updates to the RP2040 over USB serial.
-
-### 5. Mechanical Layout
-
-The PCB accommodates eight MX-style mechanical switches and an EC11 rotary encoder in a compact three-row arrangement.
-
-The supporting components are positioned relative to the switch layout:
-
-- RGB LEDs: +5.08 mm from the switch position
-- Diodes: +10.00 mm from the switch position
-- Four M3 mounting holes
-- Controller positioned at the board edge for USB access
 
 ## Media-Control Functionality
 
@@ -207,25 +141,6 @@ All source files are included in the project repository.
 | `production/bom.csv` | Bill of materials |
 | `docs/schematic.pdf` | Readable schematic export |
 | `firmware/` | CircuitPython firmware and Windows companion application |
-
-## What I Learned
-
-This project took me through the complete PCB design process rather than just the schematic stage.
-
-The main learning areas included:
-
-- Designing and routing a diode-isolated switch matrix
-- Understanding PCB footprints and physical component placement
-- Managing a two-layer PCB
-- Routing around dense components
-- Using vias and copper fills
-- Connecting addressable RGB LEDs as a chain
-- Integrating an encoder and I2C peripheral
-- Understanding USB HID and media-control commands
-- Developing firmware for an RP2040 microcontroller
-- Integrating hardware with a Windows application through USB serial
-- Running design-rule checks before manufacturing
-- Preparing a PCB for fabrication
 
 ## Final Result
 
