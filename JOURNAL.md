@@ -86,6 +86,9 @@ Current issues:
 - DRC reports 74 errors and 19 warnings
 - I have not started fixing these yet because I want to classify the errors first instead of changing things blindly
 <img width="676" height="438" alt="image" src="https://github.com/user-attachments/assets/189bd666-b45b-4cbe-9844-554f983e478e" />
+<img width="841" height="702" alt="errors pic" src="https://github.com/user-attachments/assets/6b47c350-3a3b-4b7f-a319-54bb7f6543fc" />
+
+
 
 September 23, 2026
 
